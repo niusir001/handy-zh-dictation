@@ -1,0 +1,86 @@
+{
+  "settings": {
+    "selected_model": "turbo",
+    "selected_language": "zh",
+    "spoken_languages": [
+      "zh",
+      "en"
+    ],
+    "chinese_script": "simplified",
+    "translate_to_english": false,
+    "onboarding_completed": true,
+    "vad_enabled": true,
+    "long_form_chunking": true,
+    "append_trailing_space": true,
+    "custom_words": [
+      "SBCTNet",
+      "mAP",
+      "Zenodo",
+      "Overleaf",
+      "Linear",
+      "LaTeX",
+      "DOI",
+      "Research Harness",
+      "Arena",
+      "时频重构",
+      "齿轮箱",
+      "故障诊断"
+    ],
+    "autostart_enabled": true,
+    "start_hidden": true,
+    "shortcut_activation": "hold_or_toggle",
+    "hold_threshold_ms": 300,
+    "paste_method": "ctrl_v",
+    "clipboard_handling": "dont_modify",
+    "post_process_enabled": true,
+    "post_process_provider_id": "custom",
+    "post_process_models": {
+      "custom": "your-model-name"
+    },
+    "post_process_prompts": [
+      {
+        "id": "zh_oral_to_written",
+        "name": "中文口语转书面",
+        "prompt": "<see prompt/zh_oral_to_written.txt>"
+      }
+    ],
+    "post_process_selected_prompt_id": "zh_oral_to_written",
+    "bindings": {
+      "cancel": {
+        "current_binding": "escape",
+        "default_binding": "escape",
+        "description": "Cancels the current recording.",
+        "id": "cancel",
+        "name": "Cancel"
+      },
+      "transcribe": {
+        "current_binding": "shift_left",
+        "default_binding": "option+space",
+        "description": "Converts your speech into text.",
+        "id": "transcribe",
+        "name": "Transcribe"
+      },
+      "transcribe_with_post_process": {
+        "current_binding": "option+space",
+        "default_binding": "option+shift+space",
+        "description": "Converts your speech into text and applies AI post-processing.",
+        "id": "transcribe_with_post_process",
+        "name": "Transcribe with Post-Processing"
+      }
+    },
+    "post_process_providers": [
+      {
+        "id": "custom",
+        "label": "Custom",
+        "base_url": "http://127.0.0.1:8080/v1",
+        "allow_base_url_edit": true,
+        "models_endpoint": null,
+        "supports_structured_output": false,
+        "api_format": "openai"
+      }
+    ],
+    "post_process_api_keys": {
+      "custom": "local"
+    }
+  }
+}

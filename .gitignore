@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# Never commit a real settings store — it holds the endpoint token.
+settings_store*.json
+!examples/settings_store.example.json
+*.bak
